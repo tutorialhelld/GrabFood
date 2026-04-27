@@ -6,9 +6,7 @@ namespace GrabFood
     {
         Form4 f4 = new Form4()
         {
-            Name = userName
-
-
+          Visible = false
         };
         public Form1()
         {
@@ -57,11 +55,17 @@ namespace GrabFood
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            Form3 f3 = new Form3();
-
-            f3.Show();
-            this.Hide();
+        {   
+            if(userInfo.ValidateUser(textBox1.Text, textBox2.Text))
+            {
+                Form3 f3 = new Form3();
+                f3.Show();
+                this.Hide();
+            }
+            else
+            {
+                    MessageBox.Show("Invalid username or password. Please try again.");
+            }
         }
     }
 }

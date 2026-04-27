@@ -14,7 +14,6 @@ namespace GrabFood
 {
     public partial class Form4 : Form
     {
-        List<String> userInput = new List<String>();
         
         public Form4()
         {
@@ -46,7 +45,7 @@ namespace GrabFood
         {
             String userName;
             userName = textBox1.Text;
-            userInput.Add(userName);
+ 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -113,7 +112,7 @@ namespace GrabFood
             int phoneNumber;
             if (int.TryParse(textBox4.Text, out phoneNumber))
             {
-                userInput.Add(phoneNumber.ToString());
+   
             }
             else
             {
@@ -130,14 +129,14 @@ namespace GrabFood
         {
             String address;
             address = textBox5.Text;
-            userInput.Add(address);
+    
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox3.Text == textBox2.Text)
             {
-                userInput.Add(textBox3.Text);
+                userInfo.AddUser(textBox1.Text, textBox3.Text, textBox4.Text, textBox5.Text);
                 MessageBox.Show("Username: "+textBox1.Text+"\nPassword matched: " + textBox3.Text + "\nPhone number: " + textBox4.Text + "\nAddress: " + textBox5.Text);
 
             }
