@@ -1,71 +1,56 @@
-using System.Collections;
+using System;
+using System.Data.SQLite;
+using System.Windows.Forms;
 
 namespace GrabFood
 {
     public partial class Form1 : Form
     {
-        Form4 f4 = new Form4()
-        {
-          Visible = false
-        };
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            f4.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
-        {   
-            if(userInfo.ValidateUser(textBox1.Text, textBox2.Text))
+        {
+            using (var conn = Database.GetConnection())
             {
-                Form3 f3 = new Form3();
-                f3.Show();
-                this.Hide();
+                string query =
+                    "SELECT * FROM users WHERE username=@u AND password=@p";
+
+                SQLiteCommand cmd =
+                    new SQLiteCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@u", textBox1.Text);
+                cmd.Parameters.AddWithValue("@p", textBox2.Text);
+
+                SQLiteDataReader reader =
+                    cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    MessageBox.Show("Login successful!");
+
+                    Form3 dashboard = new Form3();
+                    dashboard.Show();
+
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password.");
+                }
             }
-            else
-            {
-                    MessageBox.Show("Invalid username or password. Please try again.");
-            }
+        }
+
+        private void linkLabel2_LinkClicked(
+            object sender,
+            LinkLabelLinkClickedEventArgs e)
+        {
+            Form4 register = new Form4();
+            register.Show();
+
+            this.Hide();
         }
     }
 }
