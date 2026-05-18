@@ -82,41 +82,31 @@ namespace GrabFood
         int qty7 = 1;
         int qty8 = 1;
         int qty9 = 1;
-        int qty10 = 1;
-        int qty11 = 1;
-        int qty12 = 1;
-        int qty13 = 1;
-        int qty14 = 1;
-        int qty15 = 1;
-        int qty16 = 1;
-        int qty17 = 1;
-        int qty18 = 1;
-        
+
+
         private void button3_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(1, qty1,"Whole Chicken");
+            AddItemToBasket(1, qty1, "Whole Chicken");
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(2, qty2, "Chicken Combo");
+
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(4, qty3,"Burger/Fries");
+
         }
 
-        // Tab 4: YumBurger Button Click -> Adds Product ID 5
         private void button14_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(5, qty4, "Upgrade to Large Combo");
+
         }
 
-        // Tab 5: Desserts Button Click -> Adds Product ID 6
         private void button17_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(6, qty5, "Extra Crispy Crust Pie");
+
         }
 
         private void tabPage5_Click(object sender, EventArgs e)
@@ -138,7 +128,6 @@ namespace GrabFood
 
         private void button4_Click(object sender, EventArgs e)
         {
-            // Open the Checkout form (designer wires this event).
             var checkout = new Checkout();
             checkout.Show();
             this.Hide();
@@ -146,17 +135,18 @@ namespace GrabFood
 
         private void button5_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(12, qty6, "Seafood Platter");
+
         }
 
         private void button11_Click_1(object sender, EventArgs e)
         {
-            AddItemToBasket(7, qty7, "Seafood Platter");
+            AddItemToBasket(2, qty2, "Chicken Combo");
         }
+
 
         private void button12_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(8, qty8, "Familyfood Combo");
+            AddItemToBasket(3, qty3, "Chicken / Fries");
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -166,53 +156,9 @@ namespace GrabFood
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddItemToBasket(9, qty9, "Family Combo Size Pack");
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AddItemToBasket(10, qty10, "Family Combo Size Pack");
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            AddItemToBasket(11, qty11, "Family Combo Size Pack");
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            AddItemToBasket(13, qty12, "Family Combo Size Pack");
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            AddItemToBasket(14, qty13, "Family Combo Size Pack");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            AddItemToBasket(15, qty14, "Family Combo Size Pack");
-        }
-
-        private void button14_Click_1(object sender, EventArgs e)
-        {
-            AddItemToBasket(16, qty15, "Family Combo Size Pack");
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            AddItemToBasket(17, qty16, "Family Combo Size Pack");
-        }
-
-        private void button17_Click_1(object sender, EventArgs e)
-        {
-            AddItemToBasket(18, qty17, "Family Combo Size Pack");
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            AddItemToBasket(19, qty18, "Family Combo Size Pack");
-        }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
@@ -229,20 +175,211 @@ namespace GrabFood
 
         }
 
+        private void lblPrice1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            AddItemToBasket(5, qty4, "Basic Chicken Meal");
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            AddItemToBasket(6, qty5, "Chicken Fiesta Meal");
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            AddItemToBasket(7, qty6, "Chicken and Macaroni Meal");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AddItemToBasket(8, qty7, "Halo-Halo Dessert");
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            AddItemToBasket(9, qty8, "Fries");
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            AddItemToBasket(10, qty9, "Leche Flan");
+        }
+
+        // PRODUCT 1
         private void btnMinus1_Click(object sender, EventArgs e)
         {
-            if (qty1 > 1)
-            {
-                qty1--;
-                lblQty1.Text = qty1.ToString();
-            }
+            QuantityHelper.Decrease(ref qty1, lblQty1);
         }
 
         private void btnPlus1_Click(object sender, EventArgs e)
         {
-            qty1++;
-            lblQty1.Text = qty1.ToString();
+            QuantityHelper.Increase(ref qty1, lblQty1);
         }
 
+        // PRODUCT 2
+        private void button18_Click(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty2, label6);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty2, label6);
+        }
+
+        // PRODUCT 3
+        private void button20_Click(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty3, label7);
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // PRODUCT 4
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click1(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty4, label11);
+        }
+
+        // PRODUCT 5
+        private void button1_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty5, label12);
+        }
+
+        // PRODUCT 6
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        // PRODUCT 7
+        private void button15_Click(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty7, label14);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty7, label14);
+        }
+
+        // PRODUCT 8
+        private void button31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        // PRODUCT 9
+
+        private void button17_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty9, label31);
+        }
+        private void button29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void button21_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty3, label7);
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty4, label11);
+        }
+
+        private void button8_Click_2(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty4, label11);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty5, label12);
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty6, label13);
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty6, label13);
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty7, label14);
+        }
+
+        private void button22_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty7, label14);
+        }
+
+        private void button31_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Decrease(ref qty8, label34);
+        }
+
+        private void button32_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty8, label34);
+        }
+
+        private void button29_Click_1(object sender, EventArgs e)
+        {
+            QuantityHelper.Increase(ref qty9, label31);
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
+            this.Hide();
+        }
     }
 }

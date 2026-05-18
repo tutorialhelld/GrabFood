@@ -38,155 +38,77 @@
             linkLabel2 = new LinkLabel();
             linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
-            label18 = new Label();
-            label12 = new Label();
-            panel3 = new Panel();
-            panel4 = new Panel();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             label1 = new Label();
-            tabPage2 = new TabPage();
-            tabPage3 = new TabPage();
-            tabPage4 = new TabPage();
-            tabPage5 = new TabPage();
             panel6 = new Panel();
             pictureBox4 = new PictureBox();
             button3 = new Button();
-            panel5 = new Panel();
+            lblProductName1 = new Label();
+            lblPrice1 = new Label();
+            btnMinus1 = new Button();
+            lblQty1 = new Label();
+            btnPlus1 = new Button();
             panel7 = new Panel();
+            button18 = new Button();
+            button11 = new Button();
+            label6 = new Label();
+            button19 = new Button();
             pictureBox5 = new PictureBox();
             panel8 = new Panel();
+            button20 = new Button();
+            button12 = new Button();
+            label7 = new Label();
+            button21 = new Button();
             pictureBox6 = new PictureBox();
+            tabPage2 = new TabPage();
             label2 = new Label();
-            panel9 = new Panel();
+            panel2 = new Panel();
             pictureBox7 = new PictureBox();
             button4 = new Button();
-            panel10 = new Panel();
+            panel3 = new Panel();
             button5 = new Button();
             pictureBox8 = new PictureBox();
-            panel11 = new Panel();
-            button6 = new Button();
-            pictureBox9 = new PictureBox();
-            panel12 = new Panel();
-            button7 = new Button();
-            pictureBox10 = new PictureBox();
-            label3 = new Label();
-            panel13 = new Panel();
-            pictureBox11 = new PictureBox();
-            panel14 = new Panel();
-            pictureBox12 = new PictureBox();
-            panel15 = new Panel();
-            button8 = new Button();
-            pictureBox13 = new PictureBox();
-            label4 = new Label();
-            panel16 = new Panel();
-            button9 = new Button();
-            pictureBox14 = new PictureBox();
-            panel17 = new Panel();
-            button10 = new Button();
-            pictureBox15 = new PictureBox();
-            label5 = new Label();
-            panel18 = new Panel();
-            pictureBox16 = new PictureBox();
-            panel19 = new Panel();
-            pictureBox17 = new PictureBox();
-            panel20 = new Panel();
-            button11 = new Button();
-            pictureBox18 = new PictureBox();
-            label6 = new Label();
-            panel21 = new Panel();
-            button12 = new Button();
-            pictureBox19 = new PictureBox();
-            panel22 = new Panel();
+            panel4 = new Panel();
             button13 = new Button();
-            pictureBox20 = new PictureBox();
-            label7 = new Label();
-            panel23 = new Panel();
-            pictureBox21 = new PictureBox();
-            panel24 = new Panel();
-            pictureBox22 = new PictureBox();
-            panel25 = new Panel();
-            button14 = new Button();
-            pictureBox23 = new PictureBox();
-            label8 = new Label();
-            panel26 = new Panel();
-            button15 = new Button();
-            pictureBox24 = new PictureBox();
-            panel27 = new Panel();
-            button16 = new Button();
-            pictureBox25 = new PictureBox();
-            label9 = new Label();
-            panel28 = new Panel();
-            pictureBox26 = new PictureBox();
-            panel29 = new Panel();
-            pictureBox27 = new PictureBox();
-            panel30 = new Panel();
-            button17 = new Button();
-            pictureBox28 = new PictureBox();
-            label10 = new Label();
+            pictureBox9 = new PictureBox();
+            tabPage3 = new TabPage();
+            label3 = new Label();
+            panel5 = new Panel();
+            pictureBox10 = new PictureBox();
+            button6 = new Button();
+            panel9 = new Panel();
+            button9 = new Button();
+            pictureBox11 = new PictureBox();
+            panel10 = new Panel();
+            button10 = new Button();
+            pictureBox12 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
-            tabPage3.SuspendLayout();
-            tabPage4.SuspendLayout();
-            tabPage5.SuspendLayout();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            panel9.SuspendLayout();
+            tabPage2.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            panel10.SuspendLayout();
+            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            panel11.SuspendLayout();
+            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            panel12.SuspendLayout();
+            tabPage3.SuspendLayout();
+            panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            panel13.SuspendLayout();
+            panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            panel14.SuspendLayout();
+            panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
-            panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
-            panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
-            panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
-            panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            panel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).BeginInit();
-            panel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).BeginInit();
-            panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).BeginInit();
-            panel24.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).BeginInit();
-            panel25.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).BeginInit();
-            panel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox24).BeginInit();
-            panel27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox25).BeginInit();
-            panel28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).BeginInit();
-            panel29.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).BeginInit();
-            panel30.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox28).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -204,7 +126,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1059, 57);
+            panel1.Size = new Size(1062, 57);
             panel1.TabIndex = 1;
             // 
             // pictureBox3
@@ -285,903 +207,553 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, -16);
+            pictureBox1.Location = new Point(12, -6);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(191, 71);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            panel2.Controls.Add(label18);
-            panel2.Controls.Add(label12);
-            panel2.Location = new Point(0, 74);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(842, 78);
-            panel2.TabIndex = 7;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.Location = new Point(3, 54);
-            label18.Name = "label18";
-            label18.Size = new Size(360, 19);
-            label18.TabIndex = 33;
-            label18.Text = "Filipino Fast Food Favorites | 15-25 mins | ₱₱₱\r\n";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Arial Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(3, 16);
-            label12.Name = "label12";
-            label12.Size = new Size(133, 38);
-            label12.TabIndex = 25;
-            label12.Text = "Jollibee";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.ActiveCaption;
-            panel3.Controls.Add(panel4);
-            panel3.Location = new Point(848, 74);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(209, 382);
-            panel3.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = SystemColors.ButtonHighlight;
-            panel4.Location = new Point(0, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(209, 199);
-            panel4.TabIndex = 0;
-            // 
             // tabControl1
             // 
-            tabControl1.AccessibleName = "";
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Controls.Add(tabPage4);
-            tabControl1.Controls.Add(tabPage5);
-            tabControl1.Location = new Point(0, 158);
-            tabControl1.Multiline = true;
+            tabControl1.Location = new Point(14, 63);
+            tabControl1.Margin = new Padding(4, 3, 4, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(846, 631);
-            tabControl1.TabIndex = 12;
+            tabControl1.Size = new Size(957, 486);
+            tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(panel10);
-            tabPage1.Controls.Add(panel9);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(panel8);
-            tabPage1.Controls.Add(panel7);
-            tabPage1.Controls.Add(panel6);
+            tabPage1.AutoScroll = true;
+            tabPage1.BackColor = Color.White;
             tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(panel6);
+            tabPage1.Controls.Add(panel7);
+            tabPage1.Controls.Add(panel8);
             tabPage1.Location = new Point(4, 24);
+            tabPage1.Margin = new Padding(4, 3, 4, 3);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(838, 603);
+            tabPage1.Size = new Size(949, 458);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Bundles";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(10, 23);
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label1.Location = new Point(18, 17);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(239, 37);
+            label1.Size = new Size(350, 46);
             label1.TabIndex = 0;
             label1.Text = "Today's Favorites";
             // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(panel11);
-            tabPage2.Controls.Add(panel12);
-            tabPage2.Controls.Add(label3);
-            tabPage2.Controls.Add(panel13);
-            tabPage2.Controls.Add(panel14);
-            tabPage2.Controls.Add(panel15);
-            tabPage2.Controls.Add(label4);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(838, 603);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "ChickenJoy";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            tabPage3.Controls.Add(panel16);
-            tabPage3.Controls.Add(panel17);
-            tabPage3.Controls.Add(label5);
-            tabPage3.Controls.Add(panel18);
-            tabPage3.Controls.Add(panel19);
-            tabPage3.Controls.Add(panel20);
-            tabPage3.Controls.Add(label6);
-            tabPage3.Location = new Point(4, 24);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(838, 603);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Jolly Spaghetti";
-            tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            tabPage4.Controls.Add(panel21);
-            tabPage4.Controls.Add(panel22);
-            tabPage4.Controls.Add(label7);
-            tabPage4.Controls.Add(panel23);
-            tabPage4.Controls.Add(panel24);
-            tabPage4.Controls.Add(panel25);
-            tabPage4.Controls.Add(label8);
-            tabPage4.Location = new Point(4, 24);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(838, 603);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "YumBurger";
-            tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            tabPage5.Controls.Add(panel26);
-            tabPage5.Controls.Add(panel27);
-            tabPage5.Controls.Add(label9);
-            tabPage5.Controls.Add(panel28);
-            tabPage5.Controls.Add(panel29);
-            tabPage5.Controls.Add(panel30);
-            tabPage5.Controls.Add(label10);
-            tabPage5.Location = new Point(4, 24);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(838, 603);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Desserts";
-            tabPage5.UseVisualStyleBackColor = true;
-            tabPage5.Click += tabPage5_Click;
-            // 
             // panel6
             // 
-            panel6.Controls.Add(button3);
+            panel6.BorderStyle = BorderStyle.FixedSingle;
             panel6.Controls.Add(pictureBox4);
-            panel6.Location = new Point(10, 74);
+            panel6.Controls.Add(button3);
+            panel6.Controls.Add(lblProductName1);
+            panel6.Controls.Add(lblPrice1);
+            panel6.Controls.Add(btnMinus1);
+            panel6.Controls.Add(lblQty1);
+            panel6.Controls.Add(btnPlus1);
+            panel6.Location = new Point(18, 75);
+            panel6.Margin = new Padding(4, 3, 4, 3);
             panel6.Name = "panel6";
-            panel6.Size = new Size(691, 164);
+            panel6.Size = new Size(886, 173);
             panel6.TabIndex = 1;
             // 
             // pictureBox4
             // 
-            pictureBox4.Location = new Point(0, 0);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(6, 6);
+            pictureBox4.Margin = new Padding(4, 3, 4, 3);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(232, 164);
+            pictureBox4.Size = new Size(144, 159);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 0;
             pictureBox4.TabStop = false;
             // 
             // button3
             // 
             button3.BackColor = Color.ForestGreen;
-            button3.Location = new Point(292, 110);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(723, 115);
+            button3.Margin = new Padding(4, 3, 4, 3);
             button3.Name = "button3";
-            button3.Size = new Size(120, 40);
+            button3.Size = new Size(146, 46);
             button3.TabIndex = 1;
             button3.Text = "Add To Basket";
             button3.UseVisualStyleBackColor = false;
             // 
-            // panel5
+            // lblProductName1
             // 
-            panel5.Location = new Point(0, 158);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(846, 634);
-            panel5.TabIndex = 11;
+            lblProductName1.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblProductName1.Location = new Point(175, 30);
+            lblProductName1.Name = "lblProductName1";
+            lblProductName1.Size = new Size(250, 30);
+            lblProductName1.TabIndex = 2;
+            lblProductName1.Text = "Whole Chicken";
+            // 
+            // lblPrice1
+            // 
+            lblPrice1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblPrice1.ForeColor = Color.Green;
+            lblPrice1.Location = new Point(175, 60);
+            lblPrice1.Name = "lblPrice1";
+            lblPrice1.Size = new Size(120, 25);
+            lblPrice1.TabIndex = 3;
+            lblPrice1.Text = "₱499.00";
+            // 
+            // btnMinus1
+            // 
+            btnMinus1.Location = new Point(734, 82);
+            btnMinus1.Name = "btnMinus1";
+            btnMinus1.Size = new Size(35, 30);
+            btnMinus1.TabIndex = 4;
+            btnMinus1.Text = "-";
+            // 
+            // lblQty1
+            // 
+            lblQty1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblQty1.Location = new Point(774, 82);
+            lblQty1.Name = "lblQty1";
+            lblQty1.Size = new Size(35, 30);
+            lblQty1.TabIndex = 5;
+            lblQty1.Text = "1";
+            lblQty1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnPlus1
+            // 
+            btnPlus1.Location = new Point(814, 82);
+            btnPlus1.Name = "btnPlus1";
+            btnPlus1.Size = new Size(35, 30);
+            btnPlus1.TabIndex = 6;
+            btnPlus1.Text = "+";
             // 
             // panel7
             // 
+            panel7.BorderStyle = BorderStyle.FixedSingle;
+            panel7.Controls.Add(button18);
+            panel7.Controls.Add(button11);
+            panel7.Controls.Add(label6);
+            panel7.Controls.Add(button19);
             panel7.Controls.Add(pictureBox5);
-            panel7.Location = new Point(10, 244);
+            panel7.Location = new Point(18, 265);
+            panel7.Margin = new Padding(4, 3, 4, 3);
             panel7.Name = "panel7";
-            panel7.Size = new Size(412, 113);
+            panel7.Size = new Size(426, 138);
             panel7.TabIndex = 2;
+            // 
+            // button18
+            // 
+            button18.Location = new Point(280, 54);
+            button18.Name = "button18";
+            button18.Size = new Size(35, 30);
+            button18.TabIndex = 7;
+            button18.Text = "-";
+            // 
+            // button11
+            // 
+            button11.BackColor = Color.ForestGreen;
+            button11.ForeColor = Color.White;
+            button11.Location = new Point(274, 87);
+            button11.Margin = new Padding(4, 3, 4, 3);
+            button11.Name = "button11";
+            button11.Size = new Size(146, 46);
+            button11.TabIndex = 2;
+            button11.Text = "Add To Basket";
+            button11.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label6.Location = new Point(320, 54);
+            label6.Name = "label6";
+            label6.Size = new Size(35, 30);
+            label6.TabIndex = 8;
+            label6.Text = "1";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button19
+            // 
+            button19.Location = new Point(360, 54);
+            button19.Name = "button19";
+            button19.Size = new Size(35, 30);
+            button19.TabIndex = 9;
+            button19.Text = "+";
             // 
             // pictureBox5
             // 
-            pictureBox5.Location = new Point(0, 0);
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(6, 6);
+            pictureBox5.Margin = new Padding(4, 3, 4, 3);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(153, 113);
+            pictureBox5.Size = new Size(117, 127);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
             // 
             // panel8
             // 
+            panel8.BorderStyle = BorderStyle.FixedSingle;
+            panel8.Controls.Add(button20);
+            panel8.Controls.Add(button12);
+            panel8.Controls.Add(label7);
+            panel8.Controls.Add(button21);
             panel8.Controls.Add(pictureBox6);
-            panel8.Location = new Point(427, 244);
+            panel8.Location = new Point(478, 265);
+            panel8.Margin = new Padding(4, 3, 4, 3);
             panel8.Name = "panel8";
-            panel8.Size = new Size(412, 113);
+            panel8.Size = new Size(426, 138);
             panel8.TabIndex = 3;
+            // 
+            // button20
+            // 
+            button20.Location = new Point(274, 54);
+            button20.Name = "button20";
+            button20.Size = new Size(35, 30);
+            button20.TabIndex = 10;
+            button20.Text = "-";
+            // 
+            // button12
+            // 
+            button12.BackColor = Color.ForestGreen;
+            button12.ForeColor = Color.White;
+            button12.Location = new Point(263, 87);
+            button12.Margin = new Padding(4, 3, 4, 3);
+            button12.Name = "button12";
+            button12.Size = new Size(146, 46);
+            button12.TabIndex = 3;
+            button12.Text = "Add To Basket";
+            button12.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label7.Location = new Point(314, 54);
+            label7.Name = "label7";
+            label7.Size = new Size(35, 30);
+            label7.TabIndex = 11;
+            label7.Text = "1";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // button21
+            // 
+            button21.Location = new Point(354, 54);
+            button21.Name = "button21";
+            button21.Size = new Size(35, 30);
+            button21.TabIndex = 12;
+            button21.Text = "+";
             // 
             // pictureBox6
             // 
-            pictureBox6.Location = new Point(0, 0);
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(6, 6);
+            pictureBox6.Margin = new Padding(4, 3, 4, 3);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(153, 113);
+            pictureBox6.Size = new Size(119, 127);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 0;
             pictureBox6.TabStop = false;
             // 
+            // tabPage2
+            // 
+            tabPage2.AutoScroll = true;
+            tabPage2.BackColor = Color.White;
+            tabPage2.Controls.Add(label2);
+            tabPage2.Controls.Add(panel2);
+            tabPage2.Controls.Add(panel3);
+            tabPage2.Controls.Add(panel4);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Margin = new Padding(4, 3, 4, 3);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(949, 458);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Chickenjoy";
+            // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(10, 360);
+            label2.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label2.Location = new Point(19, 15);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(254, 25);
+            label2.Size = new Size(350, 46);
             label2.TabIndex = 4;
-            label2.Text = "Peach mango pie and more";
+            label2.Text = "Today's Favorites";
             // 
-            // panel9
+            // panel2
             // 
-            panel9.Controls.Add(button4);
-            panel9.Controls.Add(pictureBox7);
-            panel9.Location = new Point(25, 388);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(165, 209);
-            panel9.TabIndex = 5;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(pictureBox7);
+            panel2.Controls.Add(button4);
+            panel2.Location = new Point(19, 73);
+            panel2.Margin = new Padding(4, 3, 4, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(886, 173);
+            panel2.TabIndex = 5;
             // 
             // pictureBox7
             // 
-            pictureBox7.Location = new Point(0, 0);
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(6, 6);
+            pictureBox7.Margin = new Padding(4, 3, 4, 3);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(165, 113);
+            pictureBox7.Size = new Size(233, 159);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
             // 
             // button4
             // 
             button4.BackColor = Color.ForestGreen;
-            button4.Location = new Point(111, 166);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(723, 115);
+            button4.Margin = new Padding(4, 3, 4, 3);
             button4.Name = "button4";
-            button4.Size = new Size(51, 40);
-            button4.TabIndex = 6;
+            button4.Size = new Size(146, 46);
+            button4.TabIndex = 1;
+            button4.Text = "Add To Basket";
             button4.UseVisualStyleBackColor = false;
             // 
-            // panel10
+            // panel3
             // 
-            panel10.Controls.Add(button5);
-            panel10.Controls.Add(pictureBox8);
-            panel10.Location = new Point(208, 388);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(165, 209);
-            panel10.TabIndex = 6;
+            panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(button5);
+            panel3.Controls.Add(pictureBox8);
+            panel3.Location = new Point(19, 263);
+            panel3.Margin = new Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(426, 138);
+            panel3.TabIndex = 6;
             // 
             // button5
             // 
             button5.BackColor = Color.ForestGreen;
-            button5.Location = new Point(111, 166);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(274, 87);
+            button5.Margin = new Padding(4, 3, 4, 3);
             button5.Name = "button5";
-            button5.Size = new Size(51, 40);
-            button5.TabIndex = 6;
+            button5.Size = new Size(146, 46);
+            button5.TabIndex = 2;
+            button5.Text = "Add To Basket";
             button5.UseVisualStyleBackColor = false;
             // 
             // pictureBox8
             // 
-            pictureBox8.Location = new Point(0, 0);
+            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
+            pictureBox8.Location = new Point(5, 3);
+            pictureBox8.Margin = new Padding(4, 3, 4, 3);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(165, 113);
+            pictureBox8.Size = new Size(163, 130);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 0;
             pictureBox8.TabStop = false;
             // 
-            // panel11
-            // 
-            panel11.Controls.Add(button6);
-            panel11.Controls.Add(pictureBox9);
-            panel11.Location = new Point(203, 379);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(165, 209);
-            panel11.TabIndex = 13;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.ForestGreen;
-            button6.Location = new Point(111, 166);
-            button6.Name = "button6";
-            button6.Size = new Size(51, 40);
-            button6.TabIndex = 6;
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Location = new Point(0, 0);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(165, 113);
-            pictureBox9.TabIndex = 0;
-            pictureBox9.TabStop = false;
-            // 
-            // panel12
-            // 
-            panel12.Controls.Add(button7);
-            panel12.Controls.Add(pictureBox10);
-            panel12.Location = new Point(20, 379);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(165, 209);
-            panel12.TabIndex = 12;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.ForestGreen;
-            button7.Location = new Point(111, 166);
-            button7.Name = "button7";
-            button7.Size = new Size(51, 40);
-            button7.TabIndex = 6;
-            button7.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Location = new Point(0, 0);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(165, 113);
-            pictureBox10.TabIndex = 0;
-            pictureBox10.TabStop = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(5, 351);
-            label3.Name = "label3";
-            label3.Size = new Size(254, 25);
-            label3.TabIndex = 11;
-            label3.Text = "Peach mango pie and more";
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(pictureBox11);
-            panel13.Location = new Point(422, 235);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(412, 113);
-            panel13.TabIndex = 10;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Location = new Point(0, 0);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(153, 113);
-            pictureBox11.TabIndex = 0;
-            pictureBox11.TabStop = false;
-            // 
-            // panel14
-            // 
-            panel14.Controls.Add(pictureBox12);
-            panel14.Location = new Point(5, 235);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(412, 113);
-            panel14.TabIndex = 9;
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.Location = new Point(0, 0);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(153, 113);
-            pictureBox12.TabIndex = 0;
-            pictureBox12.TabStop = false;
-            // 
-            // panel15
-            // 
-            panel15.Controls.Add(button8);
-            panel15.Controls.Add(pictureBox13);
-            panel15.Location = new Point(5, 65);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(691, 164);
-            panel15.TabIndex = 8;
-            // 
-            // button8
-            // 
-            button8.BackColor = Color.ForestGreen;
-            button8.Location = new Point(292, 110);
-            button8.Name = "button8";
-            button8.Size = new Size(120, 40);
-            button8.TabIndex = 1;
-            button8.Text = "Add To Basket";
-            button8.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.Location = new Point(0, 0);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(232, 164);
-            pictureBox13.TabIndex = 0;
-            pictureBox13.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(5, 14);
-            label4.Name = "label4";
-            label4.Size = new Size(239, 37);
-            label4.TabIndex = 7;
-            label4.Text = "Today's Favorites";
-            // 
-            // panel16
-            // 
-            panel16.Controls.Add(button9);
-            panel16.Controls.Add(pictureBox14);
-            panel16.Location = new Point(203, 379);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(165, 209);
-            panel16.TabIndex = 13;
-            // 
-            // button9
-            // 
-            button9.BackColor = Color.ForestGreen;
-            button9.Location = new Point(111, 166);
-            button9.Name = "button9";
-            button9.Size = new Size(51, 40);
-            button9.TabIndex = 6;
-            button9.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox14
-            // 
-            pictureBox14.Location = new Point(0, 0);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(165, 113);
-            pictureBox14.TabIndex = 0;
-            pictureBox14.TabStop = false;
-            // 
-            // panel17
-            // 
-            panel17.Controls.Add(button10);
-            panel17.Controls.Add(pictureBox15);
-            panel17.Location = new Point(20, 379);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(165, 209);
-            panel17.TabIndex = 12;
-            // 
-            // button10
-            // 
-            button10.BackColor = Color.ForestGreen;
-            button10.Location = new Point(111, 166);
-            button10.Name = "button10";
-            button10.Size = new Size(51, 40);
-            button10.TabIndex = 6;
-            button10.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox15
-            // 
-            pictureBox15.Location = new Point(0, 0);
-            pictureBox15.Name = "pictureBox15";
-            pictureBox15.Size = new Size(165, 113);
-            pictureBox15.TabIndex = 0;
-            pictureBox15.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(5, 351);
-            label5.Name = "label5";
-            label5.Size = new Size(254, 25);
-            label5.TabIndex = 11;
-            label5.Text = "Peach mango pie and more";
-            // 
-            // panel18
-            // 
-            panel18.Controls.Add(pictureBox16);
-            panel18.Location = new Point(422, 235);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(412, 113);
-            panel18.TabIndex = 10;
-            // 
-            // pictureBox16
-            // 
-            pictureBox16.Location = new Point(0, 0);
-            pictureBox16.Name = "pictureBox16";
-            pictureBox16.Size = new Size(153, 113);
-            pictureBox16.TabIndex = 0;
-            pictureBox16.TabStop = false;
-            // 
-            // panel19
-            // 
-            panel19.Controls.Add(pictureBox17);
-            panel19.Location = new Point(5, 235);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(412, 113);
-            panel19.TabIndex = 9;
-            // 
-            // pictureBox17
-            // 
-            pictureBox17.Location = new Point(0, 0);
-            pictureBox17.Name = "pictureBox17";
-            pictureBox17.Size = new Size(153, 113);
-            pictureBox17.TabIndex = 0;
-            pictureBox17.TabStop = false;
-            // 
-            // panel20
-            // 
-            panel20.Controls.Add(button11);
-            panel20.Controls.Add(pictureBox18);
-            panel20.Location = new Point(5, 65);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(691, 164);
-            panel20.TabIndex = 8;
-            // 
-            // button11
-            // 
-            button11.BackColor = Color.ForestGreen;
-            button11.Location = new Point(292, 110);
-            button11.Name = "button11";
-            button11.Size = new Size(120, 40);
-            button11.TabIndex = 1;
-            button11.Text = "Add To Basket";
-            button11.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox18
-            // 
-            pictureBox18.Location = new Point(0, 0);
-            pictureBox18.Name = "pictureBox18";
-            pictureBox18.Size = new Size(232, 164);
-            pictureBox18.TabIndex = 0;
-            pictureBox18.TabStop = false;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(5, 14);
-            label6.Name = "label6";
-            label6.Size = new Size(239, 37);
-            label6.TabIndex = 7;
-            label6.Text = "Today's Favorites";
-            // 
-            // panel21
-            // 
-            panel21.Controls.Add(button12);
-            panel21.Controls.Add(pictureBox19);
-            panel21.Location = new Point(203, 379);
-            panel21.Name = "panel21";
-            panel21.Size = new Size(165, 209);
-            panel21.TabIndex = 20;
-            // 
-            // button12
-            // 
-            button12.BackColor = Color.ForestGreen;
-            button12.Location = new Point(111, 166);
-            button12.Name = "button12";
-            button12.Size = new Size(51, 40);
-            button12.TabIndex = 6;
-            button12.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox19
-            // 
-            pictureBox19.Location = new Point(0, 0);
-            pictureBox19.Name = "pictureBox19";
-            pictureBox19.Size = new Size(165, 113);
-            pictureBox19.TabIndex = 0;
-            pictureBox19.TabStop = false;
-            // 
-            // panel22
-            // 
-            panel22.Controls.Add(button13);
-            panel22.Controls.Add(pictureBox20);
-            panel22.Location = new Point(20, 379);
-            panel22.Name = "panel22";
-            panel22.Size = new Size(165, 209);
-            panel22.TabIndex = 19;
+            // panel4
+            // 
+            panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(button13);
+            panel4.Controls.Add(pictureBox9);
+            panel4.Location = new Point(479, 263);
+            panel4.Margin = new Padding(4, 3, 4, 3);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(426, 138);
+            panel4.TabIndex = 7;
             // 
             // button13
             // 
             button13.BackColor = Color.ForestGreen;
-            button13.Location = new Point(111, 166);
+            button13.ForeColor = Color.White;
+            button13.Location = new Point(274, 87);
+            button13.Margin = new Padding(4, 3, 4, 3);
             button13.Name = "button13";
-            button13.Size = new Size(51, 40);
-            button13.TabIndex = 6;
+            button13.Size = new Size(146, 46);
+            button13.TabIndex = 3;
+            button13.Text = "Add To Basket";
             button13.UseVisualStyleBackColor = false;
             // 
-            // pictureBox20
+            // pictureBox9
             // 
-            pictureBox20.Location = new Point(0, 0);
-            pictureBox20.Name = "pictureBox20";
-            pictureBox20.Size = new Size(165, 113);
-            pictureBox20.TabIndex = 0;
-            pictureBox20.TabStop = false;
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(6, 6);
+            pictureBox9.Margin = new Padding(4, 3, 4, 3);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(163, 127);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 0;
+            pictureBox9.TabStop = false;
             // 
-            // label7
+            // tabPage3
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(5, 351);
-            label7.Name = "label7";
-            label7.Size = new Size(254, 25);
-            label7.TabIndex = 18;
-            label7.Text = "Peach mango pie and more";
+            tabPage3.AutoScroll = true;
+            tabPage3.BackColor = Color.White;
+            tabPage3.Controls.Add(label3);
+            tabPage3.Controls.Add(panel5);
+            tabPage3.Controls.Add(panel9);
+            tabPage3.Controls.Add(panel10);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Margin = new Padding(4, 3, 4, 3);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(949, 458);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Spaghetti";
             // 
-            // panel23
+            // label3
             // 
-            panel23.Controls.Add(pictureBox21);
-            panel23.Location = new Point(422, 235);
-            panel23.Name = "panel23";
-            panel23.Size = new Size(412, 113);
-            panel23.TabIndex = 17;
+            label3.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            label3.Location = new Point(31, 36);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(350, 46);
+            label3.TabIndex = 8;
+            label3.Text = "Today's Favorites";
             // 
-            // pictureBox21
+            // panel5
             // 
-            pictureBox21.Location = new Point(0, 0);
-            pictureBox21.Name = "pictureBox21";
-            pictureBox21.Size = new Size(153, 113);
-            pictureBox21.TabIndex = 0;
-            pictureBox21.TabStop = false;
+            panel5.BorderStyle = BorderStyle.FixedSingle;
+            panel5.Controls.Add(pictureBox10);
+            panel5.Controls.Add(button6);
+            panel5.Location = new Point(31, 94);
+            panel5.Margin = new Padding(4, 3, 4, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(886, 173);
+            panel5.TabIndex = 9;
             // 
-            // panel24
+            // pictureBox10
             // 
-            panel24.Controls.Add(pictureBox22);
-            panel24.Location = new Point(5, 235);
-            panel24.Name = "panel24";
-            panel24.Size = new Size(412, 113);
-            panel24.TabIndex = 16;
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(6, 6);
+            pictureBox10.Margin = new Padding(4, 3, 4, 3);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(233, 159);
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox10.TabIndex = 0;
+            pictureBox10.TabStop = false;
             // 
-            // pictureBox22
+            // button6
             // 
-            pictureBox22.Location = new Point(0, 0);
-            pictureBox22.Name = "pictureBox22";
-            pictureBox22.Size = new Size(153, 113);
-            pictureBox22.TabIndex = 0;
-            pictureBox22.TabStop = false;
+            button6.BackColor = Color.ForestGreen;
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(723, 115);
+            button6.Margin = new Padding(4, 3, 4, 3);
+            button6.Name = "button6";
+            button6.Size = new Size(146, 46);
+            button6.TabIndex = 1;
+            button6.Text = "Add To Basket";
+            button6.UseVisualStyleBackColor = false;
             // 
-            // panel25
+            // panel9
             // 
-            panel25.Controls.Add(button14);
-            panel25.Controls.Add(pictureBox23);
-            panel25.Location = new Point(5, 65);
-            panel25.Name = "panel25";
-            panel25.Size = new Size(691, 164);
-            panel25.TabIndex = 15;
+            panel9.BorderStyle = BorderStyle.FixedSingle;
+            panel9.Controls.Add(button9);
+            panel9.Controls.Add(pictureBox11);
+            panel9.Location = new Point(31, 284);
+            panel9.Margin = new Padding(4, 3, 4, 3);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(426, 138);
+            panel9.TabIndex = 10;
             // 
-            // button14
+            // button9
             // 
-            button14.BackColor = Color.ForestGreen;
-            button14.Location = new Point(292, 110);
-            button14.Name = "button14";
-            button14.Size = new Size(120, 40);
-            button14.TabIndex = 1;
-            button14.Text = "Add To Basket";
-            button14.UseVisualStyleBackColor = false;
+            button9.BackColor = Color.ForestGreen;
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(264, 87);
+            button9.Margin = new Padding(4, 3, 4, 3);
+            button9.Name = "button9";
+            button9.Size = new Size(146, 46);
+            button9.TabIndex = 2;
+            button9.Text = "Add To Basket";
+            button9.UseVisualStyleBackColor = false;
             // 
-            // pictureBox23
+            // pictureBox11
             // 
-            pictureBox23.Location = new Point(0, 0);
-            pictureBox23.Name = "pictureBox23";
-            pictureBox23.Size = new Size(232, 164);
-            pictureBox23.TabIndex = 0;
-            pictureBox23.TabStop = false;
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(6, 6);
+            pictureBox11.Margin = new Padding(4, 3, 4, 3);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(163, 127);
+            pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox11.TabIndex = 0;
+            pictureBox11.TabStop = false;
             // 
-            // label8
+            // panel10
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(5, 14);
-            label8.Name = "label8";
-            label8.Size = new Size(239, 37);
-            label8.TabIndex = 14;
-            label8.Text = "Today's Favorites";
+            panel10.BorderStyle = BorderStyle.FixedSingle;
+            panel10.Controls.Add(button10);
+            panel10.Controls.Add(pictureBox12);
+            panel10.Location = new Point(491, 284);
+            panel10.Margin = new Padding(4, 3, 4, 3);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(426, 138);
+            panel10.TabIndex = 11;
             // 
-            // panel26
+            // button10
             // 
-            panel26.Controls.Add(button15);
-            panel26.Controls.Add(pictureBox24);
-            panel26.Location = new Point(203, 379);
-            panel26.Name = "panel26";
-            panel26.Size = new Size(165, 209);
-            panel26.TabIndex = 20;
+            button10.BackColor = Color.ForestGreen;
+            button10.ForeColor = Color.White;
+            button10.Location = new Point(263, 87);
+            button10.Margin = new Padding(4, 3, 4, 3);
+            button10.Name = "button10";
+            button10.Size = new Size(146, 46);
+            button10.TabIndex = 3;
+            button10.Text = "Add To Basket";
+            button10.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // pictureBox12
             // 
-            button15.BackColor = Color.ForestGreen;
-            button15.Location = new Point(111, 166);
-            button15.Name = "button15";
-            button15.Size = new Size(51, 40);
-            button15.TabIndex = 6;
-            button15.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox24
-            // 
-            pictureBox24.Location = new Point(0, 0);
-            pictureBox24.Name = "pictureBox24";
-            pictureBox24.Size = new Size(165, 113);
-            pictureBox24.TabIndex = 0;
-            pictureBox24.TabStop = false;
-            // 
-            // panel27
-            // 
-            panel27.Controls.Add(button16);
-            panel27.Controls.Add(pictureBox25);
-            panel27.Location = new Point(20, 379);
-            panel27.Name = "panel27";
-            panel27.Size = new Size(165, 209);
-            panel27.TabIndex = 19;
-            // 
-            // button16
-            // 
-            button16.BackColor = Color.ForestGreen;
-            button16.Location = new Point(111, 166);
-            button16.Name = "button16";
-            button16.Size = new Size(51, 40);
-            button16.TabIndex = 6;
-            button16.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox25
-            // 
-            pictureBox25.Location = new Point(0, 0);
-            pictureBox25.Name = "pictureBox25";
-            pictureBox25.Size = new Size(165, 113);
-            pictureBox25.TabIndex = 0;
-            pictureBox25.TabStop = false;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(5, 351);
-            label9.Name = "label9";
-            label9.Size = new Size(254, 25);
-            label9.TabIndex = 18;
-            label9.Text = "Peach mango pie and more";
-            // 
-            // panel28
-            // 
-            panel28.Controls.Add(pictureBox26);
-            panel28.Location = new Point(422, 235);
-            panel28.Name = "panel28";
-            panel28.Size = new Size(412, 113);
-            panel28.TabIndex = 17;
-            // 
-            // pictureBox26
-            // 
-            pictureBox26.Location = new Point(0, 0);
-            pictureBox26.Name = "pictureBox26";
-            pictureBox26.Size = new Size(153, 113);
-            pictureBox26.TabIndex = 0;
-            pictureBox26.TabStop = false;
-            // 
-            // panel29
-            // 
-            panel29.Controls.Add(pictureBox27);
-            panel29.Location = new Point(5, 235);
-            panel29.Name = "panel29";
-            panel29.Size = new Size(412, 113);
-            panel29.TabIndex = 16;
-            // 
-            // pictureBox27
-            // 
-            pictureBox27.Location = new Point(0, 0);
-            pictureBox27.Name = "pictureBox27";
-            pictureBox27.Size = new Size(153, 113);
-            pictureBox27.TabIndex = 0;
-            pictureBox27.TabStop = false;
-            // 
-            // panel30
-            // 
-            panel30.Controls.Add(button17);
-            panel30.Controls.Add(pictureBox28);
-            panel30.Location = new Point(5, 65);
-            panel30.Name = "panel30";
-            panel30.Size = new Size(691, 164);
-            panel30.TabIndex = 15;
-            // 
-            // button17
-            // 
-            button17.BackColor = Color.ForestGreen;
-            button17.Location = new Point(292, 110);
-            button17.Name = "button17";
-            button17.Size = new Size(120, 40);
-            button17.TabIndex = 1;
-            button17.Text = "Add To Basket";
-            button17.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox28
-            // 
-            pictureBox28.Location = new Point(0, 0);
-            pictureBox28.Name = "pictureBox28";
-            pictureBox28.Size = new Size(232, 164);
-            pictureBox28.TabIndex = 0;
-            pictureBox28.TabStop = false;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(5, 14);
-            label10.Name = "label10";
-            label10.Size = new Size(239, 37);
-            label10.TabIndex = 14;
-            label10.Text = "Today's Favorites";
+            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
+            pictureBox12.Location = new Point(6, 6);
+            pictureBox12.Margin = new Padding(4, 3, 4, 3);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(163, 127);
+            pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox12.TabIndex = 0;
+            pictureBox12.TabStop = false;
             // 
             // restaurant
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1059, 804);
+            ClientSize = new Size(1062, 804);
             Controls.Add(tabControl1);
-            Controls.Add(panel5);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "restaurant";
             Text = "restaurant";
+            Load += restaurant_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            tabPage2.PerformLayout();
-            tabPage3.ResumeLayout(false);
-            tabPage3.PerformLayout();
-            tabPage4.ResumeLayout(false);
-            tabPage4.PerformLayout();
-            tabPage5.ResumeLayout(false);
-            tabPage5.PerformLayout();
             panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            panel9.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            panel10.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            panel11.ResumeLayout(false);
+            panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            panel12.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            panel13.ResumeLayout(false);
+            panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            panel14.ResumeLayout(false);
+            panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            panel15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
-            panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
-            panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
-            panel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
-            panel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            panel21.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox19).EndInit();
-            panel22.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox20).EndInit();
-            panel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox21).EndInit();
-            panel24.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox22).EndInit();
-            panel25.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox23).EndInit();
-            panel26.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox24).EndInit();
-            panel27.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox25).EndInit();
-            panel28.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox26).EndInit();
-            panel29.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox27).EndInit();
-            panel30.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox28).EndInit();
             ResumeLayout(false);
         }
 
@@ -1196,93 +768,51 @@
         private LinkLabel linkLabel2;
         private LinkLabel linkLabel1;
         private PictureBox pictureBox1;
-        private Panel panel2;
-        private Label label12;
-        private Label label18;
         private VScrollBar vScrollBar1;
-        private Panel panel3;
-        private Panel panel4;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private TabPage tabPage2;
-        private TabPage tabPage3;
         private Label label1;
-        private TabPage tabPage4;
-        private TabPage tabPage5;
         private Panel panel6;
-        private Button button3;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox7;
-        private Panel panel9;
-        private Label label2;
-        private Panel panel8;
-        private PictureBox pictureBox6;
+        private Button button3;
+        private Label lblProductName1;
+        private Label lblPrice1;
+        private Button btnMinus1;
+        private Label lblQty1;
+        private Button btnPlus1;
         private Panel panel7;
+        private Button button18;
+        private Button button11;
+        private Label label6;
+        private Button button19;
         private PictureBox pictureBox5;
-        private Panel panel5;
-        private Panel panel10;
+        private Panel panel8;
+        private Button button20;
+        private Button button12;
+        private Label label7;
+        private Button button21;
+        private PictureBox pictureBox6;
+        private TabPage tabPage2;
+        private Label label2;
+        private Panel panel2;
+        private PictureBox pictureBox7;
+        private Button button4;
+        private Panel panel3;
         private Button button5;
         private PictureBox pictureBox8;
-        private Button button4;
-        private Panel panel11;
-        private Button button6;
-        private PictureBox pictureBox9;
-        private Panel panel12;
-        private Button button7;
-        private PictureBox pictureBox10;
-        private Label label3;
-        private Panel panel13;
-        private PictureBox pictureBox11;
-        private Panel panel14;
-        private PictureBox pictureBox12;
-        private Panel panel15;
-        private Button button8;
-        private PictureBox pictureBox13;
-        private Label label4;
-        private Panel panel16;
-        private Button button9;
-        private PictureBox pictureBox14;
-        private Panel panel17;
-        private Button button10;
-        private PictureBox pictureBox15;
-        private Label label5;
-        private Panel panel18;
-        private PictureBox pictureBox16;
-        private Panel panel19;
-        private PictureBox pictureBox17;
-        private Panel panel20;
-        private Button button11;
-        private PictureBox pictureBox18;
-        private Label label6;
-        private Panel panel21;
-        private Button button12;
-        private PictureBox pictureBox19;
-        private Panel panel22;
+        private Panel panel4;
         private Button button13;
-        private PictureBox pictureBox20;
-        private Label label7;
-        private Panel panel23;
-        private PictureBox pictureBox21;
-        private Panel panel24;
-        private PictureBox pictureBox22;
-        private Panel panel25;
-        private Button button14;
-        private PictureBox pictureBox23;
-        private Label label8;
-        private Panel panel26;
-        private Button button15;
-        private PictureBox pictureBox24;
-        private Panel panel27;
-        private Button button16;
-        private PictureBox pictureBox25;
-        private Label label9;
-        private Panel panel28;
-        private PictureBox pictureBox26;
-        private Panel panel29;
-        private PictureBox pictureBox27;
-        private Panel panel30;
-        private Button button17;
-        private PictureBox pictureBox28;
-        private Label label10;
+        private PictureBox pictureBox9;
+        private TabPage tabPage3;
+        private Label label3;
+        private Panel panel5;
+        private PictureBox pictureBox10;
+        private Button button6;
+        private Panel panel9;
+        private Button button9;
+        private PictureBox pictureBox11;
+        private Panel panel10;
+        private Button button10;
+        private PictureBox pictureBox12;
     }
 }

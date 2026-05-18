@@ -21,5 +21,10 @@ namespace GrabFood
         {
 
         }
+
+        private void restaurant_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

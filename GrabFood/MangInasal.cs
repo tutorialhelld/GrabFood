@@ -62,7 +62,7 @@ namespace GrabFood
 
 
 
-       
+
         // Example buttons for Mang Inasal products
 
         private void button3_Click(object sender, EventArgs e)
@@ -90,7 +90,33 @@ namespace GrabFood
             AddItemToBasket(11, "Palabok with Chicken Oil");
         }
 
-            
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var checkout = new Checkout();
+            checkout.Show();
+            this.Hide();
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
+            this.Hide();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

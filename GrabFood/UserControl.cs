@@ -40,26 +40,6 @@ namespace GrabFood
             tabPage4.Controls.Add(dgvRiders);
         }
 
-        private void CreateRidersTable()
-        {
-            using (var conn = Database.GetConnection())
-            {
-                string query = @"
-        CREATE TABLE IF NOT EXISTS Riders
-        (
-            RiderID INTEGER PRIMARY KEY AUTOINCREMENT,
-            RiderName TEXT NOT NULL,
-            PhoneNumber TEXT,
-            VehicleType TEXT,
-            Status TEXT DEFAULT 'Available'
-        );";
-
-                SQLiteCommand cmd =
-                    new SQLiteCommand(query, conn);
-
-                cmd.ExecuteNonQuery();
-            }
-        }
 
         private void LoadCustomers()
         {
