@@ -194,6 +194,7 @@ namespace GrabFood
             button9.Size = new Size(257, 250);
             button9.TabIndex = 10;
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
