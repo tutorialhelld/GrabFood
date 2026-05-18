@@ -60,47 +60,9 @@ namespace GrabFood
 
         }
 
-        private void LoadVendorProducts()
-        {
-            try
-            {
-                using (SQLiteConnection conn = new SQLiteConnection(connectionString))
-                {
-                    conn.Open();
 
-                    string query = @"
-                    SELECT ProductId, ProductName, Price, Category
-                    FROM Products
-                    WHERE Category LIKE '%Mang%' OR Category LIKE '%Inasal%'";
 
-                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn))
-                    {
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        productsGrid.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Product Load Error: " + ex.Message);
-            }
-        }
-
-        private void btnAddSelected_Click(object sender, EventArgs e)
-        {
-            if (productsGrid.CurrentRow == null)
-            {
-                MessageBox.Show("Select a product first.");
-                return;
-            }
-
-            int productId = Convert.ToInt32(productsGrid.CurrentRow.Cells["ProductId"].Value);
-            string productName = productsGrid.CurrentRow.Cells["ProductName"].Value?.ToString() ?? "";
-
-            AddItemToBasket(productId, productName);
-        }
-
+       
         // Example buttons for Mang Inasal products
 
         private void button3_Click(object sender, EventArgs e)

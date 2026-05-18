@@ -80,8 +80,6 @@
             pictureBox17 = new PictureBox();
             panel16 = new Panel();
             pictureBox18 = new PictureBox();
-            productsGrid = new DataGridView();
-            btnAddSelected = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -120,7 +118,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox18).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)productsGrid).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -684,27 +681,6 @@
             pictureBox18.TabIndex = 0;
             pictureBox18.TabStop = false;
             // 
-            // productsGrid
-            // 
-            productsGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            productsGrid.Location = new Point(980, 105);
-            productsGrid.Name = "productsGrid";
-            productsGrid.Size = new Size(280, 120);
-            productsGrid.TabIndex = 99;
-            // 
-            // btnAddSelected
-            // 
-            btnAddSelected.BackColor = Color.ForestGreen;
-            btnAddSelected.FlatStyle = FlatStyle.Flat;
-            btnAddSelected.ForeColor = Color.White;
-            btnAddSelected.Location = new Point(980, 230);
-            btnAddSelected.Name = "btnAddSelected";
-            btnAddSelected.Size = new Size(280, 35);
-            btnAddSelected.TabIndex = 100;
-            btnAddSelected.Text = "Add Selected Product";
-            btnAddSelected.UseVisualStyleBackColor = false;
-            btnAddSelected.Click += btnAddSelected_Click;
-            // 
             // MangInasal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -712,8 +688,6 @@
             ClientSize = new Size(1287, 804);
             Controls.Add(tabControl1);
             Controls.Add(panel1);
-            Controls.Add(productsGrid);
-            Controls.Add(btnAddSelected);
             Name = "MangInasal";
             Text = "MangInasal";
             Load += MangInasal_Load;
@@ -756,13 +730,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             panel16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox18).EndInit();
-            ((System.ComponentModel.ISupportInitialize)productsGrid).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView productsGrid;
-        private System.Windows.Forms.Button btnAddSelected;
         private Panel panel1;
         private LinkLabel linkLabel3;
         private LinkLabel linkLabel2;

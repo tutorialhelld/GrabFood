@@ -15,30 +15,61 @@ namespace GrabFood
         {
             using (var conn = Database.GetConnection())
             {
-                string query =
-                    "SELECT * FROM users WHERE username=@u AND password=@p";
+                string query = @"
+        SELECT * FROM users
+        WHERE TRIM(username) = @u
+        AND TRIM(password) = @p";
 
-                SQLiteCommand cmd =
-                    new SQLiteCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@u", textBox1.Text);
-                cmd.Parameters.AddWithValue("@p", textBox2.Text);
-
-                SQLiteDataReader reader =
-                    cmd.ExecuteReader();
-
-                if (reader.Read())
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
-                    MessageBox.Show("Login successful!");
+                    cmd.Parameters.AddWithValue("@u", textBox1.Text.Trim());
+                    cmd.Parameters.AddWithValue("@p", textBox2.Text.Trim());
 
-                    Form3 dashboard = new Form3();
-                    dashboard.Show();
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string role =
+                                reader["user_role"]
+                                .ToString()
+                                .Trim()
+                                .ToLower();
 
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Invalid username or password.");
+                            MessageBox.Show(
+                                "Login successful! Role: " + role
+                            );
+
+                            if (role == "admin")
+                            {
+                                UserControl admin =
+                                    new UserControl();
+
+                                admin.Show();
+                            }
+                            else if (role == "rider")
+                            {
+                                ActiveDelivery rider =
+                                    new ActiveDelivery();
+
+                                rider.Show();
+                            }
+                            else
+                            {
+                                Form3 user =
+                                    new Form3();
+
+                                user.Show();
+                            }
+
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                "Invalid username or password."
+                            );
+                        }
+                    }
                 }
             }
         }
@@ -51,6 +82,11 @@ namespace GrabFood
             register.Show();
 
             this.Hide();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
