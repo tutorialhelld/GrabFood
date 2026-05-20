@@ -106,15 +106,15 @@ namespace GrabFood
 
         private void button10_Click(object sender, EventArgs e)
         {
-            MAXRES max = new MAXRES();
+            MAXS max = new MAXS();
             max.Show();
             this.Hide();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            restaurant jollibee = new restaurant();
-            jollibee.Show();
+            jollibee jabee = new jollibee();
+            jabee.Show();
             this.Hide();
         }
 
@@ -154,9 +154,8 @@ namespace GrabFood
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MangInasal inasal = new MangInasal();
-            inasal.Show();
-
+            MangInasal mang = new MangInasal();
+            mang.Show();
             this.Hide();
         }
     }
