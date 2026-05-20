@@ -46,6 +46,10 @@
             label11 = new Label();
             label12 = new Label();
             tabControl1 = new TabControl();
+            btnDeleteCustomer = new Button();
+            btnDeleteRider = new Button();
+            button1 = new Button();
+            button2 = new Button();
             panel1.SuspendLayout();
             tabPage4.SuspendLayout();
             panel6.SuspendLayout();
@@ -56,6 +60,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 2);
@@ -230,15 +235,57 @@
             tabControl1.Size = new Size(576, 253);
             tabControl1.TabIndex = 7;
             // 
+            // btnDeleteCustomer
+            // 
+            btnDeleteCustomer.Location = new Point(420, 350);
+            btnDeleteCustomer.Name = "btnDeleteCustomer";
+            btnDeleteCustomer.Size = new Size(140, 30);
+            btnDeleteCustomer.TabIndex = 10;
+            btnDeleteCustomer.Text = "Delete Customer";
+            btnDeleteCustomer.Click += DeleteCustomer_Click;
+            // 
+            // btnDeleteRider
+            // 
+            btnDeleteRider.Location = new Point(580, 350);
+            btnDeleteRider.Name = "btnDeleteRider";
+            btnDeleteRider.Size = new Size(140, 30);
+            btnDeleteRider.TabIndex = 11;
+            btnDeleteRider.Text = "Delete Rider";
+            btnDeleteRider.Click += DeleteRider_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(495, 386);
+            button1.Name = "button1";
+            button1.Size = new Size(140, 30);
+            button1.TabIndex = 12;
+            button1.Text = "Log Out";
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(7, 118);
+            button2.Name = "button2";
+            button2.RightToLeft = RightToLeft.No;
+            button2.Size = new Size(174, 24);
+            button2.TabIndex = 4;
+            button2.Text = "Reports";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // UserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(tabControl1);
             Controls.Add(label2);
             Controls.Add(panel1);
+            Controls.Add(btnDeleteCustomer);
+            Controls.Add(btnDeleteRider);
             Name = "UserControl";
             Text = "UserControl";
             Load += UserControl_Load;
@@ -253,20 +300,6 @@
             tabControl1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
-
-            Button btnDeleteCustomer = new Button();
-            btnDeleteCustomer.Text = "Delete Customer";
-            btnDeleteCustomer.Size = new Size(140, 30);
-            btnDeleteCustomer.Location = new Point(420, 350);
-            btnDeleteCustomer.Click += DeleteCustomer_Click;
-            this.Controls.Add(btnDeleteCustomer);
-
-            Button btnDeleteRider = new Button();
-            btnDeleteRider.Text = "Delete Rider";
-            btnDeleteRider.Size = new Size(140, 30);
-            btnDeleteRider.Location = new Point(580, 350);
-            btnDeleteRider.Click += DeleteRider_Click;
-            this.Controls.Add(btnDeleteRider);
         }
 
         #endregion
@@ -289,5 +322,9 @@
         private Label label11;
         private Label label12;
         private TabControl tabControl1;
+        private Button btnDeleteCustomer;
+        private Button btnDeleteRider;
+        private Button button1;
+        private Button button2;
     }
 }

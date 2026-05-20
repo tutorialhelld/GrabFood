@@ -160,5 +160,19 @@ namespace GrabFood
 
             LoadRiders();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 logout = new Form1();
+            logout.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            adminreports reports = new adminreports();
+            reports.Show();
+            this.Hide();
+        }
     }
 }

@@ -42,6 +42,8 @@
             lblTotal = new Label();
             btnPlaceOrder = new Button();
             btnClearCart = new Button();
+            btnClearCart = new Button();
+            btnPlaceOrder = new Button();
             button8 = new Button();
             headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cartGrid).BeginInit();
@@ -50,6 +52,7 @@
             // 
             // headerPanel
             // 
+
             headerPanel.BackColor = Color.White;
             headerPanel.Controls.Add(lblLogo);
             headerPanel.Controls.Add(lblTitle);
@@ -93,6 +96,7 @@
             cartGrid.RowTemplate.Height = 35;
             cartGrid.Size = new Size(640, 370);
             cartGrid.TabIndex = 1;
+            cartGrid.CellContentClick += cartGrid_CellContentClick;
             // 
             // summaryPanel
             // 
@@ -195,6 +199,7 @@
             btnPlaceOrder.TabIndex = 7;
             btnPlaceOrder.Text = "Place Order";
             btnPlaceOrder.UseVisualStyleBackColor = false;
+            btnPlaceOrder.Click += btnPlaceOrder_Click;
             // 
             // btnClearCart
             // 
@@ -208,6 +213,7 @@
             btnClearCart.TabIndex = 8;
             btnClearCart.Text = "Clear Cart";
             btnClearCart.UseVisualStyleBackColor = false;
+            btnClearCart.Click += btnClearCart_Click;
             // 
             // button8
             // 

@@ -21,7 +21,6 @@ namespace GrabFood
             comboStatus.Items.Add("Ready for Pickup");
             comboStatus.Items.Add("Out for Delivery");
             comboStatus.Items.Add("Completed");
-            comboStatus.Items.Add("Cancelled");
         }
 
         private void LoadOrders()
@@ -39,7 +38,8 @@ namespace GrabFood
                     RiderName,
                     Address,
                     OrderDate
-                FROM Orders";
+                FROM Orders
+                WHERE Status != 'Completed'";
 
                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, conn);
                 DataTable table = new DataTable();
@@ -83,7 +83,20 @@ namespace GrabFood
                 return;
             }
 
-            int orderID = Convert.ToInt32(dgvOrders.SelectedRows[0].Cells["OrderID"].Value);
+            string riderName = dgvOrders.SelectedRows[0]
+                .Cells["RiderName"]
+                .Value
+                .ToString();
+
+            if (comboStatus.Text == "Completed" && riderName == "")
+            {
+                MessageBox.Show("Cannot complete order without a rider.");
+                return;
+            }
+
+            int orderID = Convert.ToInt32(
+                dgvOrders.SelectedRows[0].Cells["OrderID"].Value
+            );
 
             using (var conn = Database.GetConnection())
             {
@@ -95,7 +108,6 @@ namespace GrabFood
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@status", comboStatus.Text);
                 cmd.Parameters.AddWithValue("@id", orderID);
-
                 cmd.ExecuteNonQuery();
             }
 
@@ -117,15 +129,17 @@ namespace GrabFood
                 return;
             }
 
-            int orderID = Convert.ToInt32(dgvOrders.SelectedRows[0].Cells["OrderID"].Value);
+            int orderID = Convert.ToInt32(
+                dgvOrders.SelectedRows[0].Cells["OrderID"].Value
+            );
 
             using (var conn = Database.GetConnection())
             {
                 string query = @"
-                UPDATE Orders
-                SET RiderName = @rider,
-                    Status = 'Out for Delivery'
-                WHERE OrderID = @id";
+                    UPDATE Orders
+                    SET RiderName = @rider,
+                        Status = 'Out for Delivery'
+                    WHERE OrderID = @id";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@rider", comboRider.Text);
@@ -148,6 +162,48 @@ namespace GrabFood
         {
             UserControl userControl = new UserControl();
             userControl.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 logout = new Form1();
+            logout.Show();
+            this.Hide();
+        }
+
+        private void btnReadyPickup_Click(object sender, EventArgs e)
+        {
+            if (dgvOrders.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select an order first.");
+                return;
+            }
+
+            int orderID = Convert.ToInt32(
+                dgvOrders.SelectedRows[0].Cells["OrderID"].Value
+            );
+
+            using (var conn = Database.GetConnection())
+            {
+                string query = @"
+                UPDATE Orders
+                SET Status = 'Ready for Pickup'
+                WHERE OrderID = @id";
+
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", orderID);
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Order is ready for pickup!");
+            LoadOrders();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            adminreports reports = new adminreports();
+            reports.Show();
             this.Hide();
         }
     }

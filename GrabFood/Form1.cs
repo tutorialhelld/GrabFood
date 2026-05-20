@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace GrabFood
 {
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -13,12 +14,18 @@ namespace GrabFood
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text.Trim() == "" || textBox2.Text.Trim() == "")
+            {
+                MessageBox.Show("No account detected. Please enter username and password.");
+                return;
+            }
+
             using (var conn = Database.GetConnection())
             {
                 string query = @"
-        SELECT * FROM users
-        WHERE TRIM(username) = @u
-        AND TRIM(password) = @p";
+                SELECT * FROM users
+                WHERE TRIM(username) = @u
+                AND TRIM(password) = @p";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 {
@@ -29,64 +36,66 @@ namespace GrabFood
                     {
                         if (reader.Read())
                         {
-                            string role =
-                                reader["user_role"]
+                            string username = reader["username"].ToString().Trim();
+
+                            string role = reader["user_role"]
                                 .ToString()
                                 .Trim()
                                 .ToLower();
 
-                            MessageBox.Show(
-                                "Login successful! Role: " + role
-                            );
+                            Session.Username = username;
+                            Session.Address = reader["address"].ToString();
 
                             if (role == "admin")
                             {
-                                UserControl admin =
-                                    new UserControl();
-
-                                admin.Show();
+                                new UserControl().Show();
                             }
                             else if (role == "rider")
                             {
-                                ActiveDelivery rider =
-                                    new ActiveDelivery();
-
-                                rider.Show();
+                                new ActiveDelivery().Show();
+                            }
+                            else if (role == "jollibeevendor")
+                            {
+                                new jollibeevendor().Show();
+                            }
+                            else if (role == "maxvendor")
+                            {
+                                new maxvendor().Show();
+                            }
+                            else if (role == "manginasalvendor")
+                            {
+                                new manginasalvendor().Show();
+                            }
+                            else if (role == "customer")
+                            {
+                                new Form3().Show();
                             }
                             else
                             {
-                                Form3 user =
-                                    new Form3();
-
-                                user.Show();
+                                MessageBox.Show("Unknown role.");
+                                return;
                             }
 
                             this.Hide();
                         }
                         else
                         {
-                            MessageBox.Show(
-                                "Invalid username or password."
-                            );
+                            MessageBox.Show("Incorrect username or password.");
                         }
                     }
                 }
             }
         }
 
-        private void linkLabel2_LinkClicked(
-            object sender,
-            LinkLabelLinkClickedEventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form4 register = new Form4();
             register.Show();
-
             this.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

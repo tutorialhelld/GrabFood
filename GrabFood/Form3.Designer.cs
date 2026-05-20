@@ -32,8 +32,8 @@ namespace GrabFood
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             panel1 = new Panel();
+            button1 = new Button();
             linkLabel2 = new LinkLabel();
-            linkLabel1 = new LinkLabel();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label4 = new Label();
@@ -50,11 +50,10 @@ namespace GrabFood
             pictureBox10 = new PictureBox();
             label14 = new Label();
             label15 = new Label();
-            label16 = new Label();
             pictureBox11 = new PictureBox();
             label17 = new Label();
             label18 = new Label();
-            label19 = new Label();
+            linkLabel1 = new LinkLabel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -67,8 +66,9 @@ namespace GrabFood
             // 
             panel1.BackColor = SystemColors.Window;
             panel1.BorderStyle = BorderStyle.Fixed3D;
-            panel1.Controls.Add(linkLabel2);
             panel1.Controls.Add(linkLabel1);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(linkLabel2);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -77,33 +77,32 @@ namespace GrabFood
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.ForestGreen;
+            button1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(1015, 10);
+            button1.Name = "button1";
+            button1.Size = new Size(101, 30);
+            button1.TabIndex = 34;
+            button1.Text = "Log Out";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // linkLabel2
             // 
             linkLabel2.ActiveLinkColor = Color.Lime;
             linkLabel2.AutoSize = true;
             linkLabel2.Font = new Font("Segoe UI", 12F);
             linkLabel2.LinkColor = Color.SeaGreen;
-            linkLabel2.Location = new Point(288, 17);
+            linkLabel2.Location = new Point(209, 13);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(60, 21);
             linkLabel2.TabIndex = 2;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "History";
             linkLabel2.LinkClicked += linkLabel2_LinkClicked;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.ActiveLinkColor = Color.Lime;
-            linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Segoe UI", 12F);
-            linkLabel1.LinkColor = Color.SeaGreen;
-            linkLabel1.Location = new Point(229, 17);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(53, 21);
-            linkLabel1.TabIndex = 1;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Offers";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // pictureBox1
             // 
@@ -200,7 +199,7 @@ namespace GrabFood
             // 
             button10.Location = new Point(303, 365);
             button10.Name = "button10";
-            button10.Size = new Size(207, 250);
+            button10.Size = new Size(207, 205);
             button10.TabIndex = 11;
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
@@ -209,7 +208,7 @@ namespace GrabFood
             // 
             button11.Location = new Point(514, 365);
             button11.Name = "button11";
-            button11.Size = new Size(205, 266);
+            button11.Size = new Size(205, 205);
             button11.TabIndex = 12;
             button11.UseVisualStyleBackColor = true;
             button11.Click += button11_Click;
@@ -260,8 +259,9 @@ namespace GrabFood
             // label14
             // 
             label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
             label14.Font = new Font("Arial Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(305, 481);
+            label14.Location = new Point(303, 508);
             label14.Name = "label14";
             label14.Size = new Size(164, 23);
             label14.TabIndex = 27;
@@ -272,23 +272,12 @@ namespace GrabFood
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label15.Location = new Point(305, 517);
+            label15.Location = new Point(305, 543);
             label15.Name = "label15";
             label15.Size = new Size(203, 14);
             label15.TabIndex = 28;
             label15.Text = "Filipino | the house that fried chicken built";
             label15.Click += label15_Click;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Arial Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.ForeColor = Color.ForestGreen;
-            label16.Location = new Point(305, 545);
-            label16.Name = "label16";
-            label16.Size = new Size(126, 23);
-            label16.TabIndex = 29;
-            label16.Text = "Free Delivery";
             // 
             // pictureBox11
             // 
@@ -321,16 +310,19 @@ namespace GrabFood
             label18.Text = "Fast Food | Chicken joy | jolly spaghetti";
             label18.Click += label18_Click;
             // 
-            // label19
+            // linkLabel1
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Arial Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = Color.ForestGreen;
-            label19.Location = new Point(516, 567);
-            label19.Name = "label19";
-            label19.Size = new Size(78, 23);
-            label19.TabIndex = 33;
-            label19.Text = "20% Off";
+            linkLabel1.ActiveLinkColor = Color.Lime;
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Segoe UI", 12F);
+            linkLabel1.LinkColor = Color.SeaGreen;
+            linkLabel1.Location = new Point(275, 13);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(58, 21);
+            linkLabel1.TabIndex = 35;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Orders";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // Form3
             // 
@@ -338,11 +330,9 @@ namespace GrabFood
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1142, 744);
-            Controls.Add(label19);
             Controls.Add(label18);
             Controls.Add(label17);
             Controls.Add(pictureBox11);
-            Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(label14);
             Controls.Add(pictureBox10);
@@ -387,7 +377,6 @@ namespace GrabFood
 
         private Panel panel1;
         private PictureBox pictureBox1;
-        private LinkLabel linkLabel1;
         private LinkLabel linkLabel2;
         private Panel panel2;
         private Label label4;
@@ -404,10 +393,10 @@ namespace GrabFood
         private PictureBox pictureBox10;
         private Label label14;
         private Label label15;
-        private Label label16;
         private PictureBox pictureBox11;
         private Label label17;
         private Label label18;
-        private Label label19;
+        private Button button1;
+        private LinkLabel linkLabel1;
     }
 }

@@ -9,9 +9,24 @@ namespace GrabFood
         public Form4()
         {
             InitializeComponent();
+
+            textBox4.MaxLength = 11;
+            textBox4.KeyPress += textBox4_KeyPress;
         }
 
         // CONTINUE BUTTON
+        
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // allow numbers and backspace only
+            if (!char.IsControl(e.KeyChar) &&
+                !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text))
@@ -41,20 +56,14 @@ namespace GrabFood
         private void button2_Click(object sender, EventArgs e)
         {
             string username = textBox1.Text.Trim();
-
             string password = textBox2.Text.Trim();
-
             string confirmPassword = textBox3.Text.Trim();
-
             string phone = textBox4.Text.Trim();
-
             string address = textBox5.Text.Trim();
 
-            if (username == "" ||
-                password == "" ||
-                confirmPassword == "")
+            if (username == "" || password == "" || confirmPassword == "" || phone == "" || address == "")
             {
-                MessageBox.Show("Please fill required fields.");
+                MessageBox.Show("Please fill all fields.");
                 return;
             }
 
@@ -64,50 +73,41 @@ namespace GrabFood
                 return;
             }
 
+            if (phone.Length != 11)
+            {
+                MessageBox.Show("Phone number must be exactly 11 digits.");
+                return;
+            }
+
             using (var conn = Database.GetConnection())
             {
-                string query =
-                @"INSERT INTO users
+                string query = @"
+                INSERT INTO users
                 (username, password, phone_number, address, user_role)
-
                 VALUES
                 (@u, @p, @ph, @a, 'customer')";
 
-                SQLiteCommand cmd =
-                    new SQLiteCommand(query, conn);
-
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@u", username);
-
                 cmd.Parameters.AddWithValue("@p", password);
-
                 cmd.Parameters.AddWithValue("@ph", phone);
-
                 cmd.Parameters.AddWithValue("@a", address);
 
-                try
-                {
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Registered successfully!");
-
-                    Form1 login = new Form1();
-
-                    login.Show();
-
-                    this.Hide();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                cmd.ExecuteNonQuery();
             }
-        }
 
-        // EMPTY EVENTS (needed by Designer)
+            MessageBox.Show("Registered successfully!");
+
+            Form1 login = new Form1();
+            login.Show();
+            this.Hide();
+        }
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            textBox4.MaxLength = 11;
 
+            textBox4.KeyPress += textBox4_KeyPress;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -174,5 +174,13 @@ namespace GrabFood
         {
 
         }
+
+        private void Form4_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+      
+
     }
 }

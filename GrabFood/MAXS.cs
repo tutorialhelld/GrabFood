@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace GrabFood
 {
@@ -33,7 +34,11 @@ namespace GrabFood
             {
                 conn.Open();
 
-                string query = "SELECT ProductID, ProductName, Price, Category, ImagePath FROM Products";
+                string query = @"
+                SELECT ProductID, ProductName, Price, Category, ImagePath
+                FROM Products
+                WHERE Category IN ('Max Faves', 'Max Chicken', 'Desserts')
+                AND IsDeleted = 0";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
                 using (SQLiteDataReader reader = cmd.ExecuteReader())
@@ -60,7 +65,7 @@ namespace GrabFood
                         {
                             AddProduct(flowDesserts, id, name, price, category, imagePath);
                         }
- 
+
                     }
                 }
             }
@@ -249,5 +254,13 @@ namespace GrabFood
             dashboard.Show();
             this.Hide();
         }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
+        
     }
 }

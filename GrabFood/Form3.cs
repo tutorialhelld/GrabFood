@@ -135,17 +135,48 @@ namespace GrabFood
         }
 
         // --- Structural UI Stub Safety Measures ---
-        private void pictureBox1_Click(object sender, System.EventArgs e) { }
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { }
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { }
-        private void label1_Click(object sender, EventArgs e) { }
-        private void label6_Click(object sender, EventArgs e) { }
-        private void label8_Click(object sender, EventArgs e) { }
-        private void label13_Click(object sender, EventArgs e) { }
-        private void label12_Click(object sender, EventArgs e) { }
-        private void label15_Click(object sender, EventArgs e) { }
-        private void label18_Click(object sender, EventArgs e) { }
-        private void label3_Click(object sender, EventArgs e) { }
+        private void pictureBox1_Click(object sender, System.EventArgs e)
+        {
+
+        }
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            History history = new History();
+            history.Show();
+            this.Hide();
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void label14_Click(object sender, EventArgs e)
         {
@@ -156,6 +187,20 @@ namespace GrabFood
         {
             MangInasal mang = new MangInasal();
             mang.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 logout = new Form1();
+            logout.Show();
+            this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            orders orders = new orders();
+            orders.Show();
             this.Hide();
         }
     }

@@ -9,6 +9,7 @@
         private ComboBox comboStatus;
         private Button button1;
         private Button button2;
+        private Button btnDeliver;
         private Label label1;
 
         protected override void Dispose(bool disposing)
@@ -30,6 +31,8 @@
             button2 = new Button();
             label1 = new Label();
             button3 = new Button();
+            btnDeliver = new Button();
+
             ((System.ComponentModel.ISupportInitialize)dgvDeliveries).BeginInit();
             SuspendLayout();
             // 
@@ -62,6 +65,7 @@
             comboStatus.Name = "comboStatus";
             comboStatus.Size = new Size(180, 23);
             comboStatus.TabIndex = 5;
+            comboStatus.Items.Add("Pending");
             // 
             // button1
             // 
@@ -82,6 +86,13 @@
             button2.Text = "Refresh";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+
+            btnDeliver.Location = new Point(480, 384);
+            btnDeliver.Name = "btnDeliver";
+            btnDeliver.Size = new Size(130, 25);
+            btnDeliver.Text = "Mark Delivered";
+            btnDeliver.UseVisualStyleBackColor = true;
+            btnDeliver.Click += btnDeliver_Click;
             // 
             // label1
             // 
@@ -110,6 +121,7 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(btnDeliver);
             Controls.Add(comboStatus);
             Controls.Add(label1);
             Controls.Add(dgvDeliveries);

@@ -119,6 +119,8 @@
             Controls.Add(textBox2);
             Controls.Add(button1);
             Controls.Add(linkLabel2);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "GrabFood Login";
             Load += Form1_Load;
