@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite; // Swapped to use your installed provider!
 
 namespace GrabFood
 {
     public partial class Form3 : Form
     {
-        // Connection string configured for System.Data.SQLite
         private string connectionString = "Data Source=GrabFood.db;Version=3;";
 
         public Form3()
@@ -22,186 +18,197 @@ namespace GrabFood
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // Dashboard loaded successfully
+            BuildCategories();
+            BuildRestaurants();
         }
 
-        /// <summary>
-        /// Reads data from your existing SQLite database using System.Data.SQLite
-        /// </summary>
+        private void BuildCategories()
+        {
+            categoryFlow.Controls.Clear();
+
+            AddCategory("🍗 Fried Chicken", "Fried Chicken");
+            AddCategory("🍝 Palabok", "Palabok");
+            AddCategory("🍰 Desserts", "Desserts");
+            AddCategory("🍟 Fries", "Fries");
+            AddCategory("🍖 Inasal / Lechon", "Inasal/Lechon");
+        }
+
+        private void AddCategory(string text, string category)
+        {
+            Button btn = new Button();
+            btn.Text = text;
+            btn.Size = new Size(170, 45);
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.BackColor = Color.White;
+            btn.ForeColor = Color.SeaGreen;
+            btn.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            btn.Cursor = Cursors.Hand;
+            btn.Click += (s, e) => LoadProductsByCategory(category);
+
+            RoundControl(btn, 18);
+            categoryFlow.Controls.Add(btn);
+        }
+
+        private void BuildRestaurants()
+        {
+            restaurantFlow.Controls.Clear();
+
+            AddRestaurantCard("Mang Inasal", "Chicken inasal with unlimited rice", "🍗", () =>
+            {
+                new MangInasal().Show();
+                this.Hide();
+            });
+
+            AddRestaurantCard("Max's Restaurant", "The house that fried chicken built", "🍖", () =>
+            {
+                new MAXS().Show();
+                this.Hide();
+            });
+
+            AddRestaurantCard("Jollibee", "Chickenjoy and Jolly Spaghetti", "🐝", () =>
+            {
+                new jollibee().Show();
+                this.Hide();
+            });
+        }
+
+        private void AddRestaurantCard(string name, string description, string emoji, Action openForm)
+        {
+            Panel card = new Panel();
+            card.Size = new Size(300, 230);
+            card.BackColor = Color.White;
+            card.Margin = new Padding(15);
+            card.Cursor = Cursors.Hand;
+
+            Label img = new Label();
+            img.Text = emoji;
+            img.Font = new Font("Segoe UI Emoji", 52, FontStyle.Regular);
+            img.TextAlign = ContentAlignment.MiddleCenter;
+            img.Dock = DockStyle.Top;
+            img.Height = 110;
+            img.BackColor = Color.Honeydew;
+
+            Label title = new Label();
+            title.Text = name;
+            title.Font = new Font("Segoe UI", 15, FontStyle.Bold);
+            title.ForeColor = Color.FromArgb(30, 30, 30);
+            title.Location = new Point(18, 125);
+            title.AutoSize = true;
+
+            Label desc = new Label();
+            desc.Text = description;
+            desc.Font = new Font("Segoe UI", 9);
+            desc.ForeColor = Color.DimGray;
+            desc.Location = new Point(20, 160);
+            desc.Size = new Size(250, 40);
+
+            Button orderBtn = new Button();
+            orderBtn.Text = "View Menu";
+            orderBtn.Size = new Size(110, 34);
+            orderBtn.Location = new Point(18, 190);
+            orderBtn.BackColor = Color.SeaGreen;
+            orderBtn.ForeColor = Color.White;
+            orderBtn.FlatStyle = FlatStyle.Flat;
+            orderBtn.FlatAppearance.BorderSize = 0;
+            orderBtn.Cursor = Cursors.Hand;
+            orderBtn.Click += (s, e) => openForm();
+
+            card.Controls.Add(orderBtn);
+            card.Controls.Add(desc);
+            card.Controls.Add(title);
+            card.Controls.Add(img);
+
+            card.Click += (s, e) => openForm();
+            img.Click += (s, e) => openForm();
+            title.Click += (s, e) => openForm();
+            desc.Click += (s, e) => openForm();
+
+            RoundControl(card, 25);
+            RoundControl(orderBtn, 15);
+
+            restaurantFlow.Controls.Add(card);
+        }
+
         private void LoadProductsByCategory(string categoryName)
         {
             try
             {
-                using (var connection = new SQLiteConnection(connectionString))
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
                 {
                     connection.Open();
 
                     string query = "SELECT ProductName, Price, Description FROM Products WHERE Category = @Category";
 
-                    using (var command = new SQLiteCommand(query, connection))
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Category", categoryName);
 
-                        using (var reader = command.ExecuteReader())
+                        using (SQLiteDataReader reader = command.ExecuteReader())
                         {
-                            StringBuilder menuBuilder = new StringBuilder();
-                            menuBuilder.AppendLine($"--- {categoryName.ToUpper()} ITEMS ---\n");
+                            StringBuilder menu = new StringBuilder();
+                            menu.AppendLine($"{categoryName.ToUpper()} ITEMS");
+                            menu.AppendLine();
 
-                            bool itemsFound = false;
+                            bool found = false;
+
                             while (reader.Read())
                             {
-                                itemsFound = true;
-                                string productName = reader.GetString(0);
-                                double price = reader.GetDouble(1);
-                                string description = reader.IsDBNull(2) ? "Delicious choice!" : reader.GetString(2);
+                                found = true;
 
-                                menuBuilder.AppendLine($"🍗 {productName} - ₱{price:F2}");
-                                menuBuilder.AppendLine($"   Description: {description}\n");
+                                string productName = reader["ProductName"].ToString();
+                                decimal price = Convert.ToDecimal(reader["Price"]);
+                                string description = reader["Description"] == DBNull.Value
+                                    ? "Delicious choice!"
+                                    : reader["Description"].ToString();
+
+                                menu.AppendLine($"• {productName} - ₱{price:F2}");
+                                menu.AppendLine($"  {description}");
+                                menu.AppendLine();
                             }
 
-                            if (!itemsFound)
-                            {
-                                menuBuilder.AppendLine("No dishes found under this category right now.");
-                            }
+                            if (!found)
+                                menu.AppendLine("No products found in this category.");
 
-                            MessageBox.Show(menuBuilder.ToString(), $"{categoryName} Menu Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(menu.ToString(), "Menu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Database read error: {ex.Message}", "SQLite Core Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Database error: " + ex.Message);
             }
         }
 
-        // --- Category Event Mappings ---
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            LoadProductsByCategory("Fried Chicken");
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            LoadProductsByCategory("Palabok");
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            LoadProductsByCategory("Desserts");
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            LoadProductsByCategory("Fries");
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            LoadProductsByCategory("Inasal/Lechon");
-        }
-
-        // --- Navigation Actions ---
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            MAXS max = new MAXS();
-            max.Show();
+            new Form1().Show();
             this.Hide();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void linkHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            jollibee jabee = new jollibee();
-            jabee.Show();
+            new History().Show();
             this.Hide();
         }
 
-        private void pictureBox9_Click(object sender, EventArgs e)
+        private void linkOrders_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Loading Mang Inasal restaurant profile details...", "Mang Inasal Selection");
-        }
-
-        // --- Graphical Canvas Operations ---
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-            RoundPanel(panel2, 25);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        // --- Structural UI Stub Safety Measures ---
-        private void pictureBox1_Click(object sender, System.EventArgs e)
-        {
-
-        }
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            History history = new History();
-            history.Show();
-            this.Hide();
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            MangInasal mang = new MangInasal();
-            mang.Show();
+            new orders().Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void RoundControl(Control control, int radius)
         {
-            Form1 logout = new Form1();
-            logout.Show();
-            this.Hide();
-        }
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(control.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(control.Width - radius, control.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
+            path.CloseFigure();
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            orders orders = new orders();
-            orders.Show();
-            this.Hide();
+            control.Region = new Region(path);
         }
     }
 }
