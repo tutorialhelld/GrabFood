@@ -16,6 +16,7 @@
         private Button btnRefresh;
         private Button btnBack;
         private Button btnEdit;
+        private Button btnChooseImage;
 
         protected override void Dispose(bool disposing)
         {
@@ -37,6 +38,7 @@
             btnAdd = new Button();
             btnDelete = new Button();
             btnRefresh = new Button();
+            btnChooseImage = new Button();
             btnBack = new Button();
             btnEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
@@ -157,6 +159,12 @@
             btnEdit.Text = "Edit Product";
             btnEdit.UseVisualStyleBackColor = false;
             btnEdit.Click += btnEdit_Click;
+
+            btnChooseImage.Text = "Choose Image";
+            btnChooseImage.Location = new Point(350, 415);
+            btnChooseImage.Size = new Size(120, 30);
+            btnChooseImage.Click += btnChooseImage_Click;
+
             // 
             // manginasalvendor
             // 
@@ -175,6 +183,7 @@
             Controls.Add(btnDelete);
             Controls.Add(btnRefresh);
             Controls.Add(btnBack);
+            Controls.Add(btnChooseImage);
             Name = "manginasalvendor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "manginasalvendor";

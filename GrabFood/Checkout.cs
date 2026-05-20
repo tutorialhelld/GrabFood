@@ -9,17 +9,57 @@ namespace GrabFood
     {
         private string connectionString =
         @"Data Source=C:\Users\User\source\repos\GrabFood\GrabFood\bin\x64\Debug\net8.0-windows\GrabDB.db;Version=3;";
+
         private decimal deliveryFee = 49.00m;
 
         public Checkout()
         {
             InitializeComponent();
+
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
+            textBox1.KeyPress += textBox1_KeyPress;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Visible = radioButton2.Checked;
+            textBox1.Visible = radioButton2.Checked;
         }
 
         private void Checkout_Load(object sender, EventArgs e)
         {
+            radioButton1.Checked = true;
+
+            label1.Visible = false;
+            textBox1.Visible = false;
+
+            textBox1.MaxLength = 11;
+
             LoadCart();
         }
+
+        private void rbGCash_CheckedChanged(object sender, EventArgs e)
+        {
+            label1.Visible = radioButton2.Checked;
+            textBox1.Visible = radioButton2.Checked;
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtGcashNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         private void LoadCart()
         {
@@ -108,6 +148,12 @@ namespace GrabFood
                 return;
             }
 
+            if (radioButton2.Checked && textBox1.Text.Trim().Length != 11)
+            {
+                MessageBox.Show("GCash number must be exactly 11 digits.");
+                return;
+            }
+
             DialogResult result = MessageBox.Show(
                 "Place this order?",
                 "Confirm Order",
@@ -143,10 +189,7 @@ namespace GrabFood
                     using (SQLiteCommand orderCmd = new SQLiteCommand(insertOrder, conn))
                     {
                         orderCmd.Parameters.AddWithValue("@customerName", Session.Username);
-
-                        // THIS LINE
                         orderCmd.Parameters.AddWithValue("@address", Session.Address);
-
                         orderCmd.ExecuteNonQuery();
                     }
 

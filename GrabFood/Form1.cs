@@ -97,5 +97,12 @@ namespace GrabFood
         private void Form1_Load(object sender, EventArgs e)
         {
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgotpass forgot = new forgotpass();
+            forgot.Show();
+            this.Hide();
+        }
     }
 }

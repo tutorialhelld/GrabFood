@@ -214,5 +214,34 @@ namespace GrabFood
             // block everything else
             e.Handled = true;
         }
+
+        private void btnChooseImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string imagesFolder =
+                    Path.Combine(Application.StartupPath, "images");
+
+                if (!Directory.Exists(imagesFolder))
+                {
+                    Directory.CreateDirectory(imagesFolder);
+                }
+
+                string uniqueFileName =
+                    Path.GetFileNameWithoutExtension(ofd.FileName)
+                    + "_" + DateTime.Now.Ticks
+                    + Path.GetExtension(ofd.FileName);
+
+                string destinationPath =
+                    Path.Combine(imagesFolder, uniqueFileName);
+
+                File.Copy(ofd.FileName, destinationPath);
+
+                txtImagePath.Text = @"images\" + uniqueFileName;
+            }
+        }
     }
 }

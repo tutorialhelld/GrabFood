@@ -35,7 +35,7 @@ namespace GrabFood
                 conn.Open();
 
                 string query = @"
-                SELECT ProductID, ProductName, Price, Category, ImagePath
+                SELECT ProductID, ProductName, Price, Category, ImagePath, Description
                 FROM Products
                 WHERE Category IN ('Max Faves', 'Max Chicken', 'Desserts')
                 AND IsDeleted = 0";
@@ -49,21 +49,22 @@ namespace GrabFood
                         string name = reader["ProductName"].ToString();
                         double price = Convert.ToDouble(reader["Price"]);
                         string category = reader["Category"].ToString();
+                        string description = reader["Description"].ToString();
                         string imagePath = reader["ImagePath"] == DBNull.Value
                             ? ""
                             : reader["ImagePath"].ToString();
 
                         if (category == "Max Faves" || category == "Max Faves")
                         {
-                            AddProduct(flowFaves, id, name, price, category, imagePath);
+                            AddProduct(flowFaves, id, name, price, category, imagePath, description);
                         }
                         else if (category == "Max Chicken" || category == "Chicken")
                         {
-                            AddProduct(flowChicken, id, name, price, category, imagePath);
+                            AddProduct(flowChicken, id, name, price, category, imagePath, description);
                         }
                         else if (category == "Desserts" || category == "Desserts")
                         {
-                            AddProduct(flowDesserts, id, name, price, category, imagePath);
+                            AddProduct(flowDesserts, id, name, price, category, imagePath, description);
                         }
 
                     }
@@ -77,7 +78,8 @@ namespace GrabFood
         string productName,
         double price,
         string category,
-        string imagePath)
+        string imagePath,
+        string description)
         {
             int qty = 1;
 
@@ -94,6 +96,13 @@ namespace GrabFood
             lblName.Location = new Point(160, 20);
             lblName.Size = new Size(350, 30);
 
+            Label lblDescription = new Label();
+            lblDescription.Text = description;
+            lblDescription.Font = new Font("Segoe UI", 9);
+            lblDescription.ForeColor = Color.DimGray;
+            lblDescription.Location = new Point(160, 80);
+            lblDescription.Size = new Size(330, 25);
+
             Label lblCategory = new Label();
             lblCategory.Text = category;
             lblCategory.Font = new Font("Segoe UI", 10);
@@ -105,7 +114,7 @@ namespace GrabFood
             lblPrice.Text = "₱" + price.ToString("0.00");
             lblPrice.Font = new Font("Segoe UI", 12, FontStyle.Bold);
             lblPrice.ForeColor = Color.Green;
-            lblPrice.Location = new Point(160, 85);
+            lblPrice.Location = new Point(160, 105);
             lblPrice.Size = new Size(120, 25);
 
             Button btnMinus = new Button();
@@ -178,6 +187,7 @@ namespace GrabFood
             card.Controls.Add(lblQty);
             card.Controls.Add(btnPlus);
             card.Controls.Add(btnAdd);
+            card.Controls.Add(lblDescription);
 
             flow.Controls.Add(card);
         }

@@ -42,9 +42,11 @@
             lblTotal = new Label();
             btnPlaceOrder = new Button();
             btnClearCart = new Button();
-            btnClearCart = new Button();
-            btnPlaceOrder = new Button();
             button8 = new Button();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            textBox1 = new TextBox();
+            label1 = new Label();
             headerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cartGrid).BeginInit();
             summaryPanel.SuspendLayout();
@@ -52,8 +54,9 @@
             // 
             // headerPanel
             // 
-
             headerPanel.BackColor = Color.White;
+            headerPanel.Controls.Add(radioButton2);
+            headerPanel.Controls.Add(radioButton1);
             headerPanel.Controls.Add(lblLogo);
             headerPanel.Controls.Add(lblTitle);
             headerPanel.Location = new Point(0, 0);
@@ -228,12 +231,52 @@
             button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(931, 12);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(113, 19);
+            radioButton1.TabIndex = 2;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Cash on Delivery";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(931, 41);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(57, 19);
+            radioButton2.TabIndex = 3;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Gcash";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(532, 504);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 17;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(410, 512);
+            label1.Name = "label1";
+            label1.Size = new Size(116, 15);
+            label1.TabIndex = 18;
+            label1.Text = "Enter Gcash Number";
+            // 
             // Checkout
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 245, 245);
             ClientSize = new Size(1056, 549);
+            Controls.Add(label1);
+            Controls.Add(textBox1);
             Controls.Add(button8);
             Controls.Add(headerPanel);
             Controls.Add(cartGrid);
@@ -247,6 +290,7 @@
             summaryPanel.ResumeLayout(false);
             summaryPanel.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -266,5 +310,9 @@
         private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.Button btnClearCart;
         private Button button8;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private TextBox textBox1;
+        private Label label1;
     }
 }

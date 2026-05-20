@@ -8,6 +8,7 @@
         private Label lblTitle;
         private Button btnCart;
         private Button btnBack;
+        private Button btnChooseImage;
 
         private TabControl tabControl1;
         private TabPage tabFaves;
@@ -34,6 +35,7 @@
             lblTitle = new Label();
             btnCart = new Button();
             btnBack = new Button();
+            btnChooseImage = new Button();
             tabControl1 = new TabControl();
             tabFaves = new TabPage();
             flowFaves = new FlowLayoutPanel();
@@ -98,6 +100,7 @@
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
+
             // 
             // tabControl1
             // 

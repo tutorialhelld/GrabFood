@@ -16,6 +16,7 @@
         private Button btnRefresh;
         private Button btnBack;
         private Button btnEdit;
+        private Button btnChooseImage;
 
         protected override void Dispose(bool disposing)
         {
@@ -157,6 +158,14 @@
             btnEdit.Text = "Edit Product";
             btnEdit.UseVisualStyleBackColor = false;
             btnEdit.Click += btnEdit_Click;
+
+            btnChooseImage = new Button();
+            btnChooseImage.Text = "Choose Image";
+            btnChooseImage.Location = new Point(350, 415);
+            btnChooseImage.Size = new Size(120, 30);
+            btnChooseImage.Click += btnChooseImage_Click;
+            Controls.Add(btnChooseImage);
+
             // 
             // jollibeevendor
             // 
